@@ -1,0 +1,15 @@
+# docker compose up -d --build
+#
+# Secrets come from the environment, never from the image. Put them in a .env
+# file beside this one — compose reads it, the image never contains it.
+services:
+  regulatory-terminal:
+    build: .
+    restart: unless-stopped
+    ports:
+      # Bind to localhost only when a reverse proxy terminates TLS in front.
+      # Use "80:8080" to expose it directly.
+      - "127.0.0.1:8080:8080"
+    environment:
+      AUTH_USER: ${AUTH_USER:-}
+      AUTH_PASS: ${AUTH_PASS:-}

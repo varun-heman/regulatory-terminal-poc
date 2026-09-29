@@ -1,0 +1,47 @@
+# /etc/systemd/system/terminal.service
+#
+#   sudo cp deploy/terminal.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now terminal
+#   journalctl -u terminal -f
+
+[Unit]
+Description=Terminal — DeltaXY leasing platform prototype
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=terminal
+Group=terminal
+WorkingDirectory=/srv/terminal
+ExecStart=/usr/bin/node server/index.js
+Restart=always
+RestartSec=3
+
+# Secrets live in a root-owned file the service user can read, not in this unit
+# — a unit file is world-readable, and `systemctl show` prints Environment=.
+EnvironmentFile=/etc/terminal.env
+Environment=NODE_ENV=production
+Environment=PORT=8080
+Environment=HOST=127.0.0.1
+
+# The process needs to read its own directory and nothing else
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6
+RestrictNamespaces=true
+LockPersonality=true
+MemoryDenyWriteExecute=false
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+
+[Install]
+WantedBy=multi-user.target

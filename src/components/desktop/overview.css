@@ -1,0 +1,160 @@
+/* Compliance Overview — the resident home screen.
+   Namespaced .ovw throughout: module CSS is bundled globally. */
+
+.ovw {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.ovw__banner {
+  display: grid;
+  gap: 5px;
+  padding: 10px 13px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-1);
+}
+.ovw__banner p {
+  margin: 0;
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.ovw__hero {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 2fr;
+  gap: 14px;
+  align-items: stretch;
+}
+@container pane (max-width: 560px) {
+  .ovw__hero { grid-template-columns: 1fr; }
+}
+
+.ovw__heroFig,
+.ovw__stat {
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-1);
+}
+
+.ovw__heroNum {
+  margin-top: 4px;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text-bright);
+  font-variant-numeric: tabular-nums;
+}
+.ovw__heroNote {
+  margin-top: 7px;
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+}
+
+.ovw__heroSplit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@container pane (max-width: 560px) {
+  .ovw__heroSplit { grid-template-columns: repeat(3, 1fr); }
+}
+
+.ovw__statNum {
+  margin-top: 5px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--text-bright);
+  font-variant-numeric: tabular-nums;
+}
+
+.ovw__legend {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 5px;
+}
+.ovw__legend li {
+  display: grid;
+  grid-template-columns: 9px 1fr auto;
+  gap: 9px;
+  align-items: center;
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+}
+.ovw__swatch { width: 9px; height: 9px; border-radius: 2px; }
+.ovw__legendName { color: var(--text); }
+
+.ovw__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1px;
+}
+.ovw__list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+}
+.ovw__list--horizon li { grid-template-columns: minmax(0, 1fr) auto auto auto; }
+.ovw__list li:last-child { border-bottom: 0; }
+.ovw__listMain { color: var(--text); }
+.ovw__code { color: var(--accent); letter-spacing: var(--track-label); }
+
+/* ---- Added with the framework model ------------------------------------- */
+
+.ovw__fws { display: inline-flex; gap: 5px; }
+.ovw__dim { color: var(--text-ghost); }
+.ovw__lead { color: var(--text-ghost); white-space: nowrap; }
+
+.ovw__empty {
+  margin: 0;
+  font-size: var(--fs-tiny);
+  color: var(--text-ghost);
+}
+
+.ovw__go {
+  margin-top: 11px;
+  height: 27px;
+  padding: 0 13px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: none;
+  color: var(--text-dim);
+  font: inherit;
+  font-size: var(--fs-tiny);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out),
+              border-color var(--t-fast) var(--ease-out);
+}
+.ovw__go:hover { color: var(--accent); border-color: var(--accent); }
+
+.ovw__appl { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.ovw__appl li {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+}
+.ovw__applCode { color: var(--accent); letter-spacing: var(--track-label); }
+.ovw__applBasis {
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+  line-height: 1.65;
+}

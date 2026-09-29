@@ -1,0 +1,464 @@
+/* Clients — the credit unions this firm is reviewing.
+   Namespaced .cli throughout: module CSS is bundled globally (D82). */
+
+.cli {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  container-type: inline-size;
+  container-name: pane;
+}
+
+.cli__bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cli__add {
+  margin-bottom: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 27px;
+  padding: 0 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-1);
+  color: var(--text);
+  font-size: var(--fs-tiny);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out),
+              border-color var(--t-fast) var(--ease-out),
+              background var(--t-fast) var(--ease-out);
+}
+.cli__add:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+.cli__add:disabled { opacity: 0.4; cursor: default; }
+
+.cli__body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 14px 16px 18px;
+  display: grid;
+  gap: 13px;
+  align-content: start;
+}
+
+.cli__vh {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---- The table --------------------------------------------------------- */
+
+.cli__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: var(--fs-tiny);
+}
+.cli__table td {
+  padding: 8px 9px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cli__row.is-open td { background: var(--bg-elev-1); }
+.cli__row:hover td { background: var(--bg-elev-1); }
+
+.cli__name { color: var(--text-bright); }
+
+.cli__lead { padding-left: 4px !important; padding-right: 0 !important; }
+.cli__disc {
+  width: 20px; height: 20px;
+  display: grid; place-items: center;
+  border: 0;
+  background: none;
+  color: var(--text-ghost);
+  cursor: pointer;
+}
+.cli__disc:hover { color: var(--accent); }
+
+.cli__detailRow td { padding: 0 !important; background: var(--bg-elev-1); }
+
+.cli__detail {
+  padding: 14px 16px 16px;
+  display: grid;
+  gap: 14px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.cli__facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+.cli__facts div { display: grid; gap: 3px; }
+.cli__facts dt { margin: 0; }
+.cli__facts dd { margin: 0; font-size: var(--fs-tiny); color: var(--text); line-height: 1.5; }
+.cli__facts a { color: var(--accent); text-decoration: none; }
+.cli__facts a:hover { text-decoration: underline; }
+
+.cli__detailFoot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 4px;
+}
+.cli__warn { font-size: var(--fs-tiny); color: var(--caution); }
+
+/* ---- Adding ------------------------------------------------------------ */
+
+.cli__addGrid {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(260px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+@container pane (max-width: 640px) {
+  .cli__addGrid { grid-template-columns: 1fr; }
+}
+
+.cli__pick { display: grid; gap: 9px; min-width: 0; }
+
+.cli__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-2);
+  color: var(--text-ghost);
+}
+.cli__search:focus-within { border-color: var(--accent); color: var(--accent); }
+.cli__search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: none;
+  outline: none;
+  color: var(--text-bright);
+  font: inherit;
+  font-size: var(--fs-sm);
+}
+.cli__search input::placeholder { color: var(--text-ghost); }
+.cli__search--wide { max-width: 420px; }
+
+.cli__clear {
+  border: 0;
+  background: none;
+  color: var(--text-ghost);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.cli__clear:hover { color: var(--critical); }
+
+.cli__results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 268px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-1);
+}
+
+.cli__result {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 7px 11px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: var(--fs-tiny);
+  text-align: left;
+  cursor: pointer;
+}
+.cli__result:hover { background: var(--bg-elev-2); color: var(--text-bright); }
+.cli__result.is-on { background: var(--accent-wash); color: var(--accent); }
+.cli__resultName { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cli__resultReg { color: var(--text-ghost); }
+.cli__result.is-on .cli__resultReg { color: var(--accent); }
+
+.cli__none {
+  padding: 12px;
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.cli__form { display: grid; gap: 10px; align-content: start; }
+
+.cli__chosen {
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-1);
+}
+.cli__chosenName { font-size: var(--fs-sm); color: var(--text-bright); }
+.cli__chosenReg { font-size: var(--fs-tiny); color: var(--accent); }
+.cli__chosenNone { font-size: var(--fs-tiny); color: var(--text-ghost); }
+
+.cli__field { display: grid; gap: 4px; }
+.cli__field--wide { grid-column: 1 / -1; }
+.cli__field input,
+.cli__field select,
+.cli__field textarea {
+  width: 100%;
+  padding: 6px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-2);
+  color: var(--text-bright);
+  font: inherit;
+  font-size: var(--fs-tiny);
+  outline: none;
+  resize: vertical;
+}
+.cli__field input:focus,
+.cli__field select:focus,
+.cli__field textarea:focus { border-color: var(--accent); }
+.cli__field input::placeholder,
+.cli__field textarea::placeholder { color: var(--text-ghost); }
+
+.cli__edit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.cli__error {
+  padding: 7px 10px;
+  border: 1px solid var(--critical);
+  border-radius: var(--r-sm);
+  background: rgba(255, 92, 92, 0.07);
+  color: var(--critical);
+  font-size: var(--fs-tiny);
+}
+
+.cli__actions { display: flex; gap: 9px; justify-content: flex-end; }
+
+.cli__primary,
+.cli__ghost,
+.cli__danger {
+  height: 28px;
+  padding: 0 14px;
+  border-radius: var(--r-sm);
+  font-size: var(--fs-tiny);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out),
+              border-color var(--t-fast) var(--ease-out),
+              background var(--t-fast) var(--ease-out);
+}
+.cli__primary {
+  border: 1px solid var(--accent);
+  background: var(--accent-wash);
+  color: var(--accent);
+}
+.cli__primary:disabled { opacity: 0.35; cursor: default; }
+.cli__primary:hover:not(:disabled) { background: var(--accent); color: var(--void); }
+
+.cli__ghost {
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--text-dim);
+}
+.cli__ghost:hover { color: var(--text-bright); border-color: var(--text-dim); }
+
+.cli__danger {
+  border: 1px solid var(--critical);
+  background: rgba(255, 92, 92, 0.07);
+  color: var(--critical);
+}
+.cli__danger:hover { background: var(--critical); color: var(--void); }
+
+/* ---- Empty state and provenance ---------------------------------------- */
+
+.cli__empty {
+  display: grid;
+  gap: 6px;
+  padding: 28px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-sm);
+  text-align: center;
+}
+.cli__emptyTitle { font-size: var(--fs-sm); color: var(--text-bright); }
+.cli__empty p {
+  margin: 0 auto;
+  max-width: 44ch;
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.cli__prov {
+  margin: 0;
+  font-size: var(--fs-tiny);
+  color: var(--text-ghost);
+  line-height: 1.6;
+}
+.cli__prov a { color: var(--text-dim); }
+.cli__prov a:hover { color: var(--accent); }
+
+/* ---- The register shelf ------------------------------------------------- */
+
+.cli__reg {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1px;
+}
+.cli__reg li {
+  display: grid;
+  grid-template-columns: 62px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+}
+.cli__reg li.is-client .cli__regName { color: var(--text-bright); }
+.cli__regReg { color: var(--text-ghost); }
+.cli__reg li.is-client .cli__regReg { color: var(--accent); }
+
+/* ---- Kind of entity ------------------------------------------------------ */
+
+.cli__kinds { display: grid; gap: 7px; margin-bottom: 14px; }
+
+.cli__kindOpts { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.cli__kindOpt {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-1);
+  color: var(--text-dim);
+  font: inherit;
+  font-size: var(--fs-tiny);
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out),
+              border-color var(--t-fast) var(--ease-out),
+              background var(--t-fast) var(--ease-out);
+}
+.cli__kindOpt:hover { color: var(--text-bright); border-color: var(--text-dim); }
+.cli__kindOpt.is-on {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+.cli__kindReg { color: var(--text-ghost); }
+.cli__kindOpt.is-on .cli__kindReg { color: var(--accent); }
+
+/* ---- Frameworks in scope ------------------------------------------------- */
+
+.cli__fwPick { display: grid; gap: 7px; }
+
+.cli__fwOpts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 9px;
+}
+
+.cli__fwOpt {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg-elev-1);
+  color: var(--text-dim);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out),
+              border-color var(--t-fast) var(--ease-out),
+              background var(--t-fast) var(--ease-out);
+}
+.cli__fwOpt:hover:not(:disabled) { border-color: var(--text-dim); color: var(--text-bright); }
+.cli__fwOpt.is-on {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+  color: var(--accent);
+}
+.cli__fwOpt.is-blocked {
+  cursor: not-allowed;
+  border-style: dashed;
+  background: none;
+  opacity: 0.75;
+}
+
+.cli__fwOptTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.cli__fwCode { font-size: var(--fs-tiny); letter-spacing: var(--track-label); }
+.cli__fwTick { display: grid; place-items: center; width: 12px; height: 12px; }
+.cli__fwState {
+  font-size: 9px;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--caution);
+}
+.cli__fwName { font-size: var(--fs-tiny); color: var(--text); }
+.cli__fwOpt.is-on .cli__fwName { color: var(--accent); }
+.cli__fwWhy {
+  font-size: 10px;
+  color: var(--text-ghost);
+  line-height: 1.55;
+}
+
+/* ---- Frameworks column --------------------------------------------------- */
+
+.cli__fws { display: inline-flex; gap: 5px; }
+.cli__noneYet { color: var(--text-ghost); }
+
+/* ---- No register for this kind ------------------------------------------- */
+
+.cli__noRegister { display: grid; gap: 9px; }
+.cli__noRegister p {
+  margin: 0;
+  font-size: var(--fs-tiny);
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+/* The client name is the legal identity; let it wrap rather than truncate */
+.cli__table td.cli__name { white-space: normal; color: var(--text-bright); line-height: 1.4; }

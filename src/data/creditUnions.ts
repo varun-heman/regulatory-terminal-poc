@@ -1,0 +1,230 @@
+/**
+ * The Register of Credit Unions, as maintained by the Central Bank of Ireland
+ * under the Credit Union Act 1997 (as amended).
+ *
+ * Source:   Central Bank of Ireland, Register of Credit Unions
+ *           https://registers.centralbank.ie/DownloadsPage.aspx
+ * As at:    21 September 2026 (the register's own run date)
+ * Method:   Downloaded as published PDF and parsed; registered number and
+ *           name taken verbatim, nothing added.
+ * Count:    185 societies
+ *
+ * The Central Bank notes on the register itself that credit unions which have
+ * transferred, amalgamated, are being wound up by dissolution or are in
+ * liquidation remain listed until de-registration completes. A name on this
+ * list therefore means "on the register", not "trading" — which is exactly
+ * the distinction an engagement needs to make deliberately rather than by
+ * accident.
+ */
+
+export interface CreditUnion {
+  /** Registered number as the Central Bank assigns it, e.g. "462CU" */
+  reg: string
+  /** Registered name, verbatim from the register */
+  name: string
+}
+
+export const REGISTER_SOURCE = 'Central Bank of Ireland, Register of Credit Unions'
+export const REGISTER_AS_OF = '21 September 2026'
+export const REGISTER_URL = 'https://registers.centralbank.ie/DownloadsPage.aspx'
+
+export const CREDIT_UNIONS: CreditUnion[] = [
+  { reg: '462CU', name: 'A.N.S.A.C.Credit Union Limited' },
+  { reg: '357CU', name: 'Abbeyfeale Credit Union Limited' },
+  { reg: '215CU', name: 'Access Credit Union Limited' },
+  { reg: '28CU', name: 'Affinity Credit Union Limited' },
+  { reg: '230CU', name: 'Altura Credit Union Limited' },
+  { reg: '387CU', name: 'Arainn Credit Union Limited' },
+  { reg: '199CU', name: 'Ardee Credit Union Limited' },
+  { reg: '191CU', name: 'Arklow Credit Union Limited' },
+  { reg: '242CU', name: 'Athea and District Credit Union Limited' },
+  { reg: '71CU', name: 'Athenry Credit Union Limited' },
+  { reg: '134CU', name: 'Athlone and Castlerea Credit Union Limited' },
+  { reg: '74CU', name: 'Athy Credit Union Limited' },
+  { reg: '200CU', name: 'Aviate Credit Union Limited' },
+  { reg: '265CU', name: 'B & S Credit Union Limited' },
+  { reg: '59CU', name: 'Ballina Credit Union Limited' },
+  { reg: '236CU', name: 'Ballinamore Credit Union Limited' },
+  { reg: '347CU', name: 'Ballincollig Credit Union Limited' },
+  { reg: '422CU', name: 'Ballyconnell Credit Union Limited' },
+  { reg: '171CU', name: 'Ballyfermot Inchicore Credit Union Limited' },
+  { reg: '189CU', name: 'Ballygall Credit Union Limited' },
+  { reg: '444CU', name: 'Ballymote and District Credit Union Limited' },
+  { reg: '160CU', name: 'Ballyshannon & Killybegs Credit Union Limited' },
+  { reg: '364CU', name: 'Baltinglass Credit Union Limited' },
+  { reg: '139CU', name: 'Bantry Credit Union Limited' },
+  { reg: '383CU', name: 'Berehaven Credit Union Limited' },
+  { reg: '389CU', name: 'Black Raven Credit Union Limited' },
+  { reg: '105CU', name: 'Blackpool Credit Union Limited' },
+  { reg: '306CU', name: 'Blackrock Credit Union Limited' },
+  { reg: '337CU', name: 'Blarney Credit Union Limited' },
+  { reg: '361CU', name: 'Blessington and District Credit Union Limited' },
+  { reg: '376CU', name: 'Borrisokane Credit Union Limited' },
+  { reg: '382CU', name: 'Boyle Credit Union Limited' },
+  { reg: '340CU', name: 'Bruff Credit Union Limited' },
+  { reg: '211CU', name: 'Cahir Credit Union Limited' },
+  { reg: '63CU', name: 'Cairde Credit Union Limited' },
+  { reg: '356CU', name: 'Cana Credit Union Limited' },
+  { reg: '255CU', name: 'Capital Credit Union Limited' },
+  { reg: '184CU', name: 'Cara Credit Union Limited' },
+  { reg: '185CU', name: 'Carlow District Credit Union Limited' },
+  { reg: '37CU', name: 'Carrick-on-Suir Credit Union Limited' },
+  { reg: '141CU', name: 'Carrickmacross Credit Union Limited' },
+  { reg: '52CU', name: 'Castleblayney Credit Union Limited' },
+  { reg: '229CU', name: 'Castlecomer Credit Union Limited' },
+  { reg: '81CU', name: 'Cathedral and Farranree Credit Union Limited' },
+  { reg: '187CU', name: 'Cavan Credit Union Limited' },
+  { reg: '204CU', name: 'Charleville Credit Union Limited' },
+  { reg: '381CU', name: 'Claddagh Credit Union Limited' },
+  { reg: '54CU', name: 'Cleariestown Credit Union Limited' },
+  { reg: '203CU', name: 'Clonakilty & Dunmanway Credit Union Limited' },
+  { reg: '100CU', name: 'Clones Credit Union Limited' },
+  { reg: '14CU', name: 'Clonmel Credit Union Limited' },
+  { reg: '162CU', name: 'Cobh Credit Union Limited' },
+  { reg: '206CU', name: 'Cois Sionna Desmond Credit Union Limited' },
+  { reg: '427CU', name: 'Comhar Creidmheasa Cholm Cille Teoranta' },
+  { reg: '355CU', name: 'Comhar Creidmheasa Ghaoth Dobhair Teoranta' },
+  { reg: '393CU', name: 'Comhar Linn INTO Credit Union Limited' },
+  { reg: '175CU', name: 'Community Credit Union Limited' },
+  { reg: '239CU', name: 'Connect Credit Union Limited' },
+  { reg: '228CU', name: 'Connemara Credit Union Limited' },
+  { reg: '262CU', name: 'Cooley Credit Union Limited' },
+  { reg: '225CU', name: 'Core Credit Union Limited' },
+  { reg: '77CU', name: 'Credit Union Plus Limited' },
+  { reg: '152CU', name: 'Crosshaven-Carrigaline Credit Union Limited' },
+  { reg: '163CU', name: 'Croí Laighean Credit Union Limited' },
+  { reg: '323CU', name: 'Derg Credit Union Limited' },
+  { reg: '153CU', name: 'Donegal (Town) Credit Union Limited' },
+  { reg: '133CU', name: 'Donore Credit Union Limited' },
+  { reg: '23CU', name: 'Drogheda Credit Union Limited' },
+  { reg: '20CU', name: 'Drumcondra and District Credit Union Limited' },
+  { reg: '380CU', name: 'Drumshanbo Credit Union Limited' },
+  { reg: '377CU', name: 'Dubco Ireland Credit Union Limited' },
+  { reg: '298CU', name: 'Dunboyne and District Credit Union Limited' },
+  { reg: '109CU', name: 'East Coast Credit Union Limited' },
+  { reg: '409CU', name: 'Education Credit Union Limited' },
+  { reg: '46CU', name: 'Elevate Credit Union Limited' },
+  { reg: '10CU', name: 'Emyvale District Credit Union Limited' },
+  { reg: '343CU', name: 'Enfield Credit Union Limited' },
+  { reg: '7CU', name: 'Enniscorthy Credit Union Limited' },
+  { reg: '365CU', name: 'Ennistymon and District Credit Union Limited' },
+  { reg: '458CU', name: 'Erris Credit Union Limited' },
+  { reg: '155CU', name: 'Farranree Credit Union Limited' },
+  { reg: '234CU', name: 'Finglas Credit Union Limited' },
+  { reg: '125CU', name: 'First Choice Credit Union Limited' },
+  { reg: '89CU', name: 'First South Credit Union Limited' },
+  { reg: '221CU', name: 'First Tech Credit Union Limited' },
+  { reg: '450CU', name: 'Foyle Credit Union Limited' },
+  { reg: '412CU', name: 'Gas and Water Credit Union Limited' },
+  { reg: '202CU', name: 'Gateway Credit Union Limited' },
+  { reg: '375CU', name: 'Goresbridge Credit Union Limited' },
+  { reg: '66CU', name: 'Gort Credit Union Limited' },
+  { reg: '392CU', name: 'Granard Credit Union Limited' },
+  { reg: '243CU', name: 'Greystones and District Credit Union Limited' },
+  { reg: '96CU', name: 'Gurranabraher Credit Union Limited' },
+  { reg: '303CU', name: 'Health Services Staffs Credit Union Limited' },
+  { reg: '332CU', name: 'Heartland Credit Union Limited' },
+  { reg: '42CU', name: 'Heritage Credit Union Limited' },
+  { reg: '274CU', name: 'Inishowen Credit Union Limited' },
+  { reg: '36CU', name: 'Inspire Credit Union Limited' },
+  { reg: '145CU', name: 'Journi Credit Union Limited' },
+  { reg: '15CU', name: 'Kanturk Credit Union Limited' },
+  { reg: '344CU', name: 'Kilcock-Kilcloon and District Credit Union Limited' },
+  { reg: '43CU', name: 'Kildare Credit Union Limited' },
+  { reg: '288CU', name: 'Killarney Credit Union Limited' },
+  { reg: '167CU', name: 'Kilmallock Credit Union Limited' },
+  { reg: '397CU', name: 'Kilnamanagh & Tallaght West Credit Union Limited' },
+  { reg: '186CU', name: 'Kilrush Credit Union Limited' },
+  { reg: '244CU', name: 'Larkhill and District Credit Union Limited' },
+  { reg: '269CU', name: 'Le Chéile Credit Union Limited' },
+  { reg: '330CU', name: 'Leighlin Credit Union Limited' },
+  { reg: '232CU', name: 'Letterkenny Credit Union Limited' },
+  { reg: '113CU', name: 'Life Credit Union Limited' },
+  { reg: '223CU', name: 'Lifford Credit Union Limited' },
+  { reg: '368CU', name: 'Limerick & District Credit Union Limited' },
+  { reg: '317CU', name: 'Link Credit Union Limited' },
+  { reg: '261CU', name: 'Lisduggan District Credit Union Limited' },
+  { reg: '359CU', name: 'Listowel Credit Union Limited' },
+  { reg: '174CU', name: 'Lucan District Credit Union Limited' },
+  { reg: '299CU', name: 'Macroom Credit Union Limited' },
+  { reg: '268CU', name: 'Malahide and District Credit Union Limited' },
+  { reg: '95CU', name: 'Mallow Credit Union Limited' },
+  { reg: '472CU', name: 'Manorhamilton and District Credit Union Limited' },
+  { reg: '181CU', name: 'Member First Credit Union Limited' },
+  { reg: '205CU', name: 'Midleton Credit Union Limited' },
+  { reg: '112CU', name: 'Mitchelstown Credit Union Limited' },
+  { reg: '182CU', name: 'Monaghan Credit Union Limited' },
+  { reg: '369CU', name: 'Monasterevan Credit Union Limited' },
+  { reg: '159CU', name: 'Mountmellick Credit Union Limited' },
+  { reg: '416CU', name: 'Mulcair Credit Union Limited' },
+  { reg: '135CU', name: 'Naomh Breandáin Credit Union Limited' },
+  { reg: '240CU', name: 'Nenagh Credit Union Limited' },
+  { reg: '49CU', name: 'New Ross Credit Union Limited' },
+  { reg: '352CU', name: 'Newmarket Credit Union Limited' },
+  { reg: '108CU', name: 'North East Credit Union Limited' },
+  { reg: '149CU', name: 'North Midlands Credit Union Limited' },
+  { reg: '220CU', name: 'North West Credit Union Limited' },
+  { reg: '218CU', name: 'Our Lady Crowned Credit Union Limited' },
+  { reg: '79CU', name: 'Palmerstown Credit Union Limited' },
+  { reg: '137CU', name: 'People First Credit Union Limited' },
+  { reg: '219CU', name: 'Portarlington Credit Union Limited' },
+  { reg: '192CU', name: 'Premier Credit Union Limited' },
+  { reg: '394CU', name: 'Prison Service Credit Union Limited' },
+  { reg: '226CU', name: 'Progressive Credit Union Limited' },
+  { reg: '455CU', name: 'Public Service Credit Union Limited' },
+  { reg: '156CU', name: 'Rathmore and District Credit Union Limited' },
+  { reg: '117CU', name: 'Roscommon Credit Union Limited' },
+  { reg: '13CU', name: 'Roscrea Credit Union Limited' },
+  { reg: '60CU', name: 'RTE Credit Union Limited' },
+  { reg: '55CU', name: 'Saint Raphael\'s Garda Credit Union Limited' },
+  { reg: '166CU', name: 'Sarsfield Credit Union Limited' },
+  { reg: '275CU', name: 'Savvi Credit Union Limited' },
+  { reg: '454CU', name: 'Sheephaven Credit Union Limited' },
+  { reg: '148CU', name: 'Slane Credit Union Limited' },
+  { reg: '78CU', name: 'South Dublin Credit Union Limited' },
+  { reg: '5CU', name: 'St. Agnes Credit Union Limited' },
+  { reg: '390CU', name: 'St. Ailbes Credit Union Limited' },
+  { reg: '9CU', name: 'St. Brigid\'s Credit Union Limited' },
+  { reg: '144CU', name: 'St. Canice\'s Kilkenny Credit Union Limited' },
+  { reg: '336CU', name: 'St. Colman\'s (Claremorris) Credit Union Limited' },
+  { reg: '254CU', name: 'St. Colmcille\'s (Kells) Credit Union Limited' },
+  { reg: '132CU', name: 'St. Columba\'s Credit Union Limited' },
+  { reg: '294CU', name: 'St. Declan\'s Ashbourne Credit Union Limited' },
+  { reg: '213CU', name: 'St. Francis\' Credit Union Limited' },
+  { reg: '154CU', name: 'St. Michael\'s Credit Union Limited' },
+  { reg: '129CU', name: 'St. Paul\'s Garda Credit Union Limited' },
+  { reg: '413CU', name: 'Swilly-Mulroy Credit Union Limited' },
+  { reg: '126CU', name: 'Synergy Credit Union Limited' },
+  { reg: '161CU', name: 'Tallaght and Firhouse Credit Union Limited' },
+  { reg: '379CU', name: 'Tara and District Credit Union Limited' },
+  { reg: '64CU', name: 'Teachers\' Union Of Ireland Credit Union Limited' },
+  { reg: '102CU', name: 'Templemore Credit Union Limited' },
+  { reg: '35CU', name: 'The Lough Credit Union Limited' },
+  { reg: '465CU', name: 'The Rosses Credit Union Limited' },
+  { reg: '39CU', name: 'Thomastown Credit Union Limited' },
+  { reg: '98CU', name: 'Tipperary Credit Union Limited' },
+  { reg: '1CU', name: 'Tower Credit Union Limited' },
+  { reg: '461CU', name: 'Tubbercurry and District Credit Union Limited' },
+  { reg: '119CU', name: 'Tullamore Credit Union Limited' },
+  { reg: '58CU', name: 'Tullow Credit Union Limited' },
+  { reg: '170CU', name: 'Unity Credit Union Limited' },
+  { reg: '442CU', name: 'Virginia Credit Union Limited' },
+  { reg: '61CU', name: 'West Midlands Credit Union Limited' },
+  { reg: '245CU', name: 'Westport Credit Union Limited' },
+  { reg: '130CU', name: 'Wexford Credit Union Limited' },
+  { reg: '201CU', name: 'Wicklow and District Credit Union Limited' },
+  { reg: '53CU', name: 'Youghal Credit Union Limited' },
+]
+
+export const creditUnionByReg = (reg: string) =>
+  CREDIT_UNIONS.find((c) => c.reg === reg)
+
+/**
+ * There is deliberately no "short name" helper here.
+ *
+ * There was one, and it stripped "Credit Union Limited" to save a column's
+ * width. A registered name is the client's legal identity and the thing a
+ * finding is addressed to; abbreviating it in the interface made the list
+ * tidier and the record wrong. Let the column be wide.
+ */
+

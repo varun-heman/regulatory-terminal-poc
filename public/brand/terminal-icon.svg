@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!--
+    The square mark: the brand device on its own.
+
+    The lockup is 5.94:1 and unreadable at 16px, so a tab icon uses the one
+    element both lockups share — the brackets — drawn to the same proportions
+    as the artwork in this folder (chevron arm 1:1, stroke ~0.32 of the arm).
+    Theme-aware, so it reads on either browser chrome.
+  -->
+  <style>
+    .b { fill: #7ECCDF; }
+    @media (prefers-color-scheme: light) { .b { fill: #7295FC; } }
+  </style>
+  <path class="b" d="M26.4 13.2v9.6L16.8 32l9.6 9.2v9.6L7.2 32Z"/>
+  <path class="b" d="M37.6 13.2v9.6L47.2 32l-9.6 9.2v9.6L56.8 32Z"/>
+</svg>

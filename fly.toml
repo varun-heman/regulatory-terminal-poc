@@ -1,0 +1,42 @@
+# Fly.io — the least server to look after: it builds the Dockerfile, gives the
+# app a hostname and terminates TLS.
+#
+#   fly launch --no-deploy --copy-config --name <your-app-name>
+#   fly secrets set AUTH_USER=... AUTH_PASS=...
+#   fly deploy
+#
+# Secrets are set with `fly secrets`, never in this file — it is committed.
+
+app = "deltaxy-regulatory-terminal"
+primary_region = "lhr"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+  HOST = "0.0.0.0"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "suspend"
+  auto_start_machines = true
+  # A demo that nobody is looking at should cost nothing to leave running
+  min_machines_running = 0
+
+  [http_service.http_options]
+    # The app gzips its own responses
+    [http_service.http_options.response]
+      pristine = true
+
+  [[http_service.checks]]
+    grace_period = "5s"
+    interval = "30s"
+    method = "GET"
+    path = "/healthz"
+    timeout = "3s"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
