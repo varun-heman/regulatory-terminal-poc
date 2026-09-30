@@ -18,3 +18,10 @@ dist
 # Logs
 *.log
 npm-debug.log*
+
+# Client engagement data. The CPC provision tree in src/data/cpc/provisions.json
+# and provisionText.json is public law and is committed; a *.local.json beside
+# it is a real client's assessments — their documents reviewed, their control
+# weaknesses — and must never leave this machine. The app picks one up
+# automatically when present and falls back to the committed illustrative set.
+src/data/cpc/*.local.json

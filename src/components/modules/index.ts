@@ -3,6 +3,7 @@ import type { AppId } from '../../domain/apps'
 import { AppStoreView } from './AppStoreView'
 import { Clients } from './Clients'
 import { Frameworks } from './Frameworks'
+import { GapAnalysis } from './GapAnalysis'
 import { HorizonScanning } from './HorizonScanning'
 
 /**
@@ -18,4 +19,5 @@ export const MODULE_VIEWS: Partial<Record<AppId, ComponentType>> = {
   clients: Clients,
   frameworks: Frameworks,
   horizon: HorizonScanning,
+  gaps: GapAnalysis,
 }

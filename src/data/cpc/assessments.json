@@ -1,0 +1,313 @@
+[
+{
+"provision": "s48-r19",
+"gap": "gap",
+"priority": "high",
+"nature": "new",
+"documents": [
+"Sales Process Manual v2",
+"Advice Record template"
+],
+"analysis": "No documented process for recording the basis on which a consumer's best interest was determined. Three of the five files sampled carried no rationale at all."
+},
+{
+"provision": "s48-r28",
+"gap": "partial",
+"priority": "low",
+"nature": "update",
+"documents": [
+"Conflicts of Interest Policy v4"
+],
+"analysis": "Policy refers to the previous terminology and has not been reissued. The underlying control operates, but the procedure supporting it is not written down."
+},
+{
+"provision": "s48-r34",
+"gap": "gap",
+"priority": "high",
+"nature": "update",
+"documents": [
+"Vulnerability training pack",
+"Escalation guide"
+],
+"analysis": "Vulnerability material exists across training and guidance documents but there is no standalone policy, and records of identified circumstances are not available to staff providing ongoing assistance."
+},
+{
+"provision": "s48-r36",
+"gap": "gap",
+"priority": "high",
+"nature": "new",
+"documents": [
+"CRM field specification"
+],
+"analysis": "No evidence that trusted contact persons have been nominated, or that the written consents this provision requires have been obtained."
+},
+{
+"provision": "s48-r37",
+"gap": "gap",
+"priority": "medium",
+"nature": "new",
+"documents": [],
+"analysis": "No policy or procedure for employees to raise a concern that a consumer is at risk of financial abuse."
+},
+{
+"provision": "s48-r42",
+"gap": "none",
+"priority": "none",
+"nature": "",
+"documents": [
+"Digital journey walkthrough, 4 Jun 2026"
+],
+"analysis": "Digitalisation requirements are met. The online journey was walked end to end and the required disclosures appear at each decision point."
+},
+{
+"provision": "s48-r55",
+"gap": "partial",
+"priority": "medium",
+"nature": "update",
+"documents": [
+"Pre-contract pack",
+"Website copy audit"
+],
+"analysis": "Disclosures are present but two of them appear after the point of commitment rather than before it."
+},
+{
+"provision": "s48-r61",
+"gap": "none",
+"priority": "none",
+"nature": "",
+"documents": [
+"Schedule of Charges, Apr 2026"
+],
+"analysis": "Charges are disclosed in the required form and the schedule is current."
+},
+{
+"provision": "s48-r72",
+"gap": "check",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Provision may not be engaged by this entity's permissions. Scope to be confirmed with the client before this is assessed."
+},
+{
+"provision": "s48-r89",
+"gap": "gap",
+"priority": "medium",
+"nature": "new",
+"documents": [
+"Marketing approval log"
+],
+"analysis": "Advertising approval log does not record who approved each item or on what date, so the control cannot be evidenced retrospectively."
+},
+{
+"provision": "s48-r101",
+"gap": "none",
+"priority": "none",
+"nature": "",
+"documents": [
+"Errors register FY26",
+"Errors procedure v3"
+],
+"analysis": "Errors resolution procedure meets the requirement and the log is complete for the period."
+},
+{
+"provision": "s48-r108",
+"gap": "partial",
+"priority": "low",
+"nature": "update",
+"documents": [
+"Complaints register",
+"Response letter templates"
+],
+"analysis": "Complaints are resolved within the required timeline but the final response letters do not consistently state the right of referral."
+},
+{
+"provision": "s48-r118",
+"gap": "none",
+"priority": "none",
+"nature": "",
+"documents": [
+"Retention schedule"
+],
+"analysis": "Records retention meets the required period and the retrieval test performed on 11 Jun 2026 succeeded."
+},
+{
+"provision": "s48-r127",
+"gap": "check",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Applies only to activities the entity may not carry on. Confirm permissions."
+},
+{
+"provision": "s17A-r3",
+"gap": "gap",
+"priority": "high",
+"nature": "new",
+"documents": [],
+"analysis": "Standards for Business have not been mapped to existing policies, so it cannot be shown which internal document discharges each standard."
+},
+{
+"provision": "s17A-r5",
+"gap": "partial",
+"priority": "medium",
+"nature": "new",
+"documents": [
+"Board minute, 12 Mar 2026"
+],
+"analysis": "Board has approved the standards in principle. No evidence of the ongoing oversight the supporting standards require."
+},
+{
+"provision": "s17A-r9",
+"gap": "none",
+"priority": "none",
+"nature": "",
+"documents": [
+"Governance framework v6"
+],
+"analysis": "Governance arrangements meet the supporting standard."
+},
+{
+"provision": "s48-r1",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r2",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r3",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r4",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r5",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r6",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r7",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r8",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r9",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r10",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r11",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r12",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r13",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r14",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r15",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r418",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r419",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+},
+{
+"provision": "s48-r420",
+"gap": "na",
+"priority": "none",
+"nature": "",
+"documents": [],
+"analysis": "Preliminary or final provision — creates no testable duty for this entity."
+}
+]
